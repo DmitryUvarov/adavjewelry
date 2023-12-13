@@ -1,0 +1,68 @@
+%ic {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+  &:before {
+    @extend %ic;
+    display: block;
+  }
+}
+
+._icon-angle:before {
+  content: "\e900";
+}
+._icon-arrow-right:before {
+  content: "\e901";
+}
+._icon-arrow-right-long:before {
+  content: "\e902";
+}
+._icon-cart:before {
+  content: "\e903";
+}
+._icon-cart-add:before {
+  content: "\e904";
+}
+._icon-cart-added:before {
+  content: "\e905";
+}
+._icon-close:before {
+  content: "\e906";
+}
+._icon-facebook:before {
+  content: "\e907";
+}
+._icon-favorite:before {
+  content: "\e908";
+}
+._icon-favorite-active:before {
+  content: "\e909";
+}
+._icon-instagram:before {
+  content: "\e90a";
+}
+._icon-location:before {
+  content: "\e90b";
+}
+._icon-next:before {
+  content: "\e90c";
+}
+._icon-prev:before {
+  content: "\e90d";
+}
+._icon-search:before {
+  content: "\e90e";
+}
+._icon-telegram:before {
+  content: "\e90f";
+}
+._icon-whatsapp:before {
+  content: "\e910";
+}
