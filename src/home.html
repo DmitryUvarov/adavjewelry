@@ -8,6 +8,71 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
+
+			<section class="hero">
+				<div class="hero__container">
+					<div class="hero__slider swiper">
+						<div class="hero__wrapper swiper-wrapper">
+							<div class="hero__slide swiper-slide">
+								<div class="hero__image-ibg">
+									<picture>
+										<source srcset="img/hero/small01.jpg" type="image/webp" media="(max-width:767px)">
+										<source srcset="img/hero/01.jpg" type="image/webp">
+										<img src="@img/hero/01.jpg" alt="">
+									</picture>
+								</div>
+								<h1 class="hero__title">
+									<p>Ювелирные</p>
+									<p>украшения</p>
+								</h1>
+								<div class="hero__text">
+									<p>Мы уделяем особое внимание качеству и дизайну, чтобы предложить нашим клиентам неповторимые украшения, которые подчеркнут их индивидуальность и стиль</p>
+								</div>
+							</div>
+							<div class="hero__slide swiper-slide">
+								<div class="hero__image-ibg">
+									<picture>
+										<source srcset="img/hero/small01.jpg" type="image/webp" media="(max-width:767px)">
+										<source srcset="img/hero/02.jpg" type="image/webp">
+										<img src="@img/hero/02.jpg" alt="">
+									</picture>
+								</div>
+								<h1 class="hero__title">
+									<p>Adav</p>
+									<p>jewelry</p>
+								</h1>
+								<div class="hero__text">
+									<p>Мы уделяем особое внимание качеству и дизайну, чтобы предложить нашим клиентам неповторимые украшения, которые подчеркнут их индивидуальность и стиль</p>
+								</div>
+							</div>
+						</div>
+						<div class="hero__pagination pagination"></div>
+					</div>
+					<div class="hero__items">
+						<div class="hero__item">
+							<div class="hero__ico"><img src="@img/hero/ico01.svg" alt=""></div>
+							<div class="hero__item-text">Гарантия на весь товар</div>
+						</div>
+						<div class="hero__item">
+							<div class="hero__ico"><img src="@img/hero/ico02.svg" alt=""></div>
+							<div class="hero__item-text">Быстрый заказ</div>
+						</div>
+						<div class="hero__item">
+							<div class="hero__ico"><img src="@img/hero/ico03.svg" alt=""></div>
+							<div class="hero__item-text">Бесплатная доставка</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- <section class="test">
+				<div class="test__container">
+					<div class="test__body">
+
+					</div>
+				</div>
+			</section> -->
+
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
