@@ -75,3 +75,74 @@
     padding-bottom: percent(330, 412);
   }
 }
+
+//========================================================================================================================================================
+
+.readmore {
+  @include adaptiveValue("padding-top", 75, 35);
+  @include adaptiveValue("padding-bottom", 75, 35);
+  &__container {
+  }
+
+  &__body {
+    display: grid;
+    @include adaptiveValue("gap", 30, 20);
+
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__image-ibg {
+    border-radius: toRem(30);
+    overflow: hidden;
+    padding-bottom: percent(640, 670);
+    height: fit-content;
+  }
+
+  &__content {
+  }
+
+  &__showmore {
+  }
+}
+.showmore {
+  &__content {
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 133.3%; /* 32/24 */
+    p {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 30, 10);
+      }
+    }
+  }
+
+  &__more {
+    @include adaptiveValue("margin-top", 30, 20);
+    width: fit-content;
+    position: relative;
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 133.3%; /* 32/24 */
+    transition: color 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #e8c886;
+        &::before {
+          background-color: #e8c886;
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: toRem(1);
+      bottom: 0;
+      left: 0;
+      background-color: #312200;
+      transition: background-color 0.3s ease 0s;
+    }
+  }
+}
