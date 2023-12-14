@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Подарочный сертификат"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="certificate">
+                <div class="certificate__container">
+                    <div class="certificate__breadcrumbs breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная </a></li>
+                            <li class="breadcrumbs__item"><span class="breadcrumbs__current">Подарочные сертификаты</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="certificate__body">
+                        <div class="certificate__image-ibg"><img src="@img/certificate/01.jpg" alt=""></div>
+                        <div class="certificate__content">
+                            <h1 class="certificate__title">Подарочный сертификат</h1>
+
+                            <div data-amount class="certificate__quantity amount">
+                                <button data-amount-minus type="button" class="amount__button amount__button--minus">-</button>
+                                <div class="amount__output">
+                                    <input type="text" class="amount__input" value="100000">
+                                    <span data-amount-value>100000</span> сум
+                                </div>
+                                <button data-amount-plus type="button" class="amount__button amount__button--plus">+</button>
+                            </div>
+
+                            <div class="certificate__text">Подарите то, что точно понравится, без долгих поисков.
+                                Сертификат можно купить в нашем магазине или оформить онлайн, не выходя из дома.</div>
+                            <div class="certificate__buttons">
+                                <button class="certificate__button button">Купить в 1 клик</button>
+                                <button class="certificate__button button-line _icon-cart-add">Добавить в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            @@include('html/_products.htm',{
+            "title":"Популярные товары"
+            })
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

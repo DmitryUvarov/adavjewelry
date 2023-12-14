@@ -74,4 +74,42 @@ function pageLoad() {
 
         }
 
+
+        /////////////////
+
+        // Находим элементы на странице
+
+      let amount = document.querySelector('[data-amount]');
+      if (amount) {
+            let amountValueElement = document.querySelector('[data-amount-value]');
+            let amountMinusButton = document.querySelector('[data-amount-minus]');
+            let amountPlusButton = document.querySelector('[data-amount-plus]');
+            let amountInput = document.querySelector('.amount__input');
+
+            let currentValue = parseInt(amountValueElement.textContent.replace(/\s/g, ''), 10);
+
+            function formatNumberWithSpaces(number) {
+                return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+            }
+
+            function updateValue(step) {
+                currentValue += step;
+                amountValueElement.textContent = formatNumberWithSpaces(currentValue);
+                amountInput.value = currentValue;
+            }
+
+            amountMinusButton.addEventListener('click', function() {
+                if (currentValue > 10000) {
+                updateValue(-10000);
+                }
+            });
+
+            updateValue(0)
+
+            amountPlusButton.addEventListener('click', function() {
+                updateValue(10000);
+            });
+      }
+
+
 }

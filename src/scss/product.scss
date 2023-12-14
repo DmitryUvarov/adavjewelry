@@ -258,3 +258,129 @@
     }
   }
 }
+
+//========================================================================================================================================================
+
+.certificate {
+  @include adaptiveValue("padding-top", 60, 30);
+  @include adaptiveValue("padding-bottom", 100, 35);
+  &__container {
+  }
+
+  &__breadcrumbs {
+    margin-bottom: toRem(30);
+  }
+
+  &__body {
+    display: flex;
+    @include adaptiveValue("gap", 53, 20, 0, 1420, 991);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__image-ibg {
+    padding-bottom: percent(500, 1390);
+
+    @media (min-width: $mobile) {
+      flex: 0 0 percent(653, 1390);
+    }
+    @media (max-width: $mobile) {
+      padding-bottom: percent(260, 345);
+    }
+  }
+
+  &__content {
+    @media (min-width: $mobile) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__title {
+    color: #1d1d1d;
+    @include adaptiveValue("font-size", 28, 26);
+    font-weight: 700;
+    line-height: 121.4%; /* 34/28 */
+
+    margin-bottom: toRem(30);
+  }
+
+  &__quantity {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 60, 35);
+    }
+  }
+
+  &__text {
+    font-size: toRem(15);
+    font-weight: 600;
+    line-height: 118.8%; /* 19/16 */
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 60, 35);
+    }
+  }
+
+  &__buttons {
+    @include adaptiveValue("margin-top", 60, 30);
+    display: flex;
+    flex-wrap: wrap;
+    @include adaptiveValue("gap", 15, 10);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__button {
+    font-weight: 600;
+    font-size: toRem(20);
+
+    @media (min-width: $mobile) {
+      flex: 1 0 toRem(300);
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+}
+
+.amount {
+  display: flex;
+  align-items: center;
+  gap: toRem(20);
+  &__button {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: toRem(1) solid #1d1d1d;
+
+    color: #1d1d1d;
+    font-size: toRem(24);
+  }
+
+  &__button--minus {
+  }
+
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  &__output {
+    @include adaptiveValue("font-size", 32, 28);
+    font-weight: 700;
+    line-height: 100%; /* 100% */
+  }
+
+  &__button--plus {
+  }
+}

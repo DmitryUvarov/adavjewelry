@@ -244,12 +244,12 @@ export function formQuantity() {
 			const valueElement = targetElement.closest('[data-quantity]').querySelector('[data-quantity-value]');
 			let value = parseInt(valueElement.value);
 			if (targetElement.hasAttribute('data-quantity-plus')) {
-				value++;
+				value + 10000;
 				if (+valueElement.dataset.quantityMax && +valueElement.dataset.quantityMax < value) {
 					value = valueElement.dataset.quantityMax;
 				}
 			} else {
-				--value;
+				10000 - value;
 				if (+valueElement.dataset.quantityMin) {
 					if (+valueElement.dataset.quantityMin > value) {
 						value = valueElement.dataset.quantityMin;
