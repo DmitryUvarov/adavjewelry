@@ -135,6 +135,8 @@ function initSliders() {
 		observer: true,
 		observeParents: true,
 		speed: 800,
+		loop: true,
+
 
 		navigation: {
 			prevEl: '.products__slider .button-prev',
@@ -156,6 +158,40 @@ function initSliders() {
 			},
 			1330: {
 				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+		},
+
+	});
+}
+	if (document.querySelector('.blog__slider')) {
+		new Swiper('.blog__slider', {
+		modules: [Navigation],
+		observer: true,
+		observeParents: true,
+		speed: 800,
+		loop: true,
+
+		navigation: {
+			prevEl: '.blog__slider .button-prev',
+			nextEl: '.blog__slider .button-next',
+		},
+
+		breakpoints: {
+			320: {
+				slidesPerView: 1.5,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+			1330: {
+				slidesPerView: 5,
 				spaceBetween: 20,
 			},
 		},

@@ -1,0 +1,108 @@
+.blog {
+  @include adaptiveValue("padding-top", 75, 35);
+  @include adaptiveValue("padding-bottom", 75, 35);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 35, 20);
+  }
+
+  &__items {
+    display: grid;
+    @include adaptiveValue("gap", 20, 10);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(250), 1fr));
+
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__slider {
+    position: relative;
+
+    @media (max-width: $mobile) {
+      margin: 0 toRem(-15);
+      padding: 0 toRem(15);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background-color: #fff;
+      z-index: 1;
+    }
+    &::before {
+      left: calc(100% + toRem(3));
+    }
+    &::after {
+      right: calc(100% + toRem(3));
+    }
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+  }
+
+  &__navigation {
+    @media (min-width: $pc) {
+      position: absolute;
+      width: calc(100% + toRem(74));
+      top: toRem(145);
+      left: toRem(-37);
+
+      z-index: 2;
+    }
+    @media (max-width: $pc) {
+      justify-content: flex-end;
+      margin-top: toRem(25);
+      column-gap: toRem(20);
+
+      & .navigation__button::after {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+.item-blog {
+  display: flex;
+  flex-direction: column;
+  &__image-ibg {
+    overflow: hidden;
+    border-radius: toRem(10);
+    display: block;
+    padding-bottom: percent(315, 252);
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 25, 10);
+    }
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    font-size: toRem(18);
+    font-weight: 300;
+    line-height: 111.1%; /* 20/18 */
+
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #e8c886;
+      }
+    }
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 15);
+    }
+  }
+
+  &__date {
+  }
+}
