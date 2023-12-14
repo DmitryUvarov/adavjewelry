@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Карточка товара"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="product">
+                <div class="product__container">
+                    <div class="product__breadcrumbs breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная </a></li>
+                            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Каталог </a></li>
+                            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Серьги </a></li>
+                            <li class="breadcrumbs__item"><span class="breadcrumbs__current">Серьги подвесные с фианитами</span></li>
+                        </ul>
+                    </div>
+                    <div class="product__body">
+
+                        <div class="product__sliders">
+                            <div class="product__slider swiper">
+                                <div class="product__wrapper swiper-wrapper">
+                                    <div class="product__slide slide-product swiper-slide">
+                                        <img src="@img/product/01.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </div>
+                                    <div class="product__slide slide-product swiper-slide">
+                                        <img src="@img/product/01.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </div>
+                                    <div class="product__slide slide-product swiper-slide">
+                                        <img src="@img/product/01.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </div>
+                                    <div class="product__slide slide-product swiper-slide">
+                                        <img src="@img/product/01.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product__trumbs-slider swiper">
+                                <div class="product__trumbs-wrapper swiper-wrapper">
+                                    <div class="product__trumbs-slide slide-trumb-product swiper-slide">
+                                        <img src="@img/product/small01.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </div>
+                                    <div class="product__trumbs-slide slide-trumb-product swiper-slide">
+                                        <img src="@img/product/small01.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </div>
+                                    <div class="product__trumbs-slide slide-trumb-product swiper-slide">
+                                        <img src="@img/product/small01.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </div>
+                                    <div class="product__trumbs-slide slide-trumb-product swiper-slide">
+                                        <img src="@img/product/small01.jpg" alt="" loading="lazy">
+                                        <div class="preloader"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="product__content content-product">
+                            <h1 class="content-product__title">Серьги подвесные с фианитами</h1>
+                            <div class="content-product__article">Артикул: Т14702В613</div>
+                            <div class="content-product__price">
+                                <div class="content-product__current">166 500 сум</div>
+                                <div class="content-product__old">213 462 сум</div>
+                                <div class="content-product__percent">-22%</div>
+                            </div>
+
+                            <div data-showmore="items" class="content-product__showmore-line showmore-line">
+                                <ul data-showmore-content="4" class="showmore-line__content">
+                                    <li class="showmore-line__line line">
+                                        <span>Изделие</span>
+                                        <span>Серьги</span>
+                                    </li>
+                                    <li class="showmore-line__line line">
+                                        <span>Металл</span>
+                                        <span>золото</span>
+                                    </li>
+                                    <li class="showmore-line__line line">
+                                        <span>Проба</span>
+                                        <span>585</span>
+                                    </li>
+                                    <li class="showmore-line__line line">
+                                        <span>Вставка</span>
+                                        <span>фианит</span>
+                                    </li>
+                                    <li class="showmore-line__line line">
+                                        <span>Проба</span>
+                                        <span>585</span>
+                                    </li>
+                                    <li class="showmore-line__line line">
+                                        <span>Вставка</span>
+                                        <span>фианит</span>
+                                    </li>
+                                </ul>
+                                <button hidden data-showmore-button type="button" class="showmore-line__more"><span>Больше информации об изделии</span><span>Скрыть</span></button>
+                            </div>
+
+                            <div class="content-product__subtitle">Размер кольца</div>
+                            <div class="content-product__size">
+                                <div class="content-product__checkbox checkbox-num">
+                                    <input id="c_1" checked data-error="Ошибка" class="checkbox-num__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_1" class="checkbox-num__label"><span class="checkbox-num__text">16</span></label>
+                                </div>
+                                <div class="content-product__checkbox checkbox-num">
+                                    <input id="c_2" data-error="Ошибка" class="checkbox-num__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_2" class="checkbox-num__label"><span class="checkbox-num__text">16,5</span></label>
+                                </div>
+                                <div class="content-product__checkbox checkbox-num">
+                                    <input id="c_3" data-error="Ошибка" class="checkbox-num__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_3" class="checkbox-num__label"><span class="checkbox-num__text">17</span></label>
+                                </div>
+                                <div class="content-product__checkbox checkbox-num">
+                                    <input id="c_4" data-error="Ошибка" class="checkbox-num__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_4" class="checkbox-num__label"><span class="checkbox-num__text">18</span></label>
+                                </div>
+                                <div class="content-product__checkbox checkbox-num">
+                                    <input id="c_5" data-error="Ошибка" class="checkbox-num__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_5" class="checkbox-num__label"><span class="checkbox-num__text">20</span></label>
+                                </div>
+                                <div class="content-product__checkbox checkbox-num">
+                                    <input id="c_6" data-error="Ошибка" class="checkbox-num__input" type="checkbox" value="1" name="form[]">
+                                    <label for="c_6" class="checkbox-num__label"><span class="checkbox-num__text">21</span></label>
+                                </div>
+                            </div>
+
+                            <div class="content-product__buttons">
+                                <button class="content-product__button button">Купить в 1 клик</button>
+                                <button class="content-product__button button-line _icon-cart-add">Добавить в корзину</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="product__about about-product">
+                        <h2 class="about-product__title title">Об изделии</h2>
+                        <div data-tabs class="about-product__tabs tabs">
+                            <nav data-tabs-titles class="tabs__navigation">
+                                <button type="button" class="tabs__title _tab-active">Общие характеристики</button>
+                                <button type="button" class="tabs__title">Металл</button>
+                            </nav>
+                            <div data-tabs-body class="tabs__content">
+                                <div class="tabs__body">
+                                    <li class="line">
+                                        <span>Изделие</span>
+                                        <span>Серьги</span>
+                                    </li>
+                                    <li class="line">
+                                        <span>Металл</span>
+                                        <span>золото</span>
+                                    </li>
+                                    <li class="line">
+                                        <span>Проба</span>
+                                        <span>585</span>
+                                    </li>
+                                    <li class="line">
+                                        <span>Вставка</span>
+                                        <span>фианит</span>
+                                    </li>
+                                    <li class="line">
+                                        <span>Проба</span>
+                                        <span>585</span>
+                                    </li>
+                                    <li class="line">
+                                        <span>Вставка</span>
+                                        <span>фианит</span>
+                                    </li>
+                                </div>
+                                <div class="tabs__body">
+                                    <li class="line">
+                                        <span>Металл</span>
+                                        <span>Красное золото</span>
+                                    </li>
+                                    <li class="line">
+                                        <span>Проба</span>
+                                        <span>Au 585</span>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="about-product__button button _icon-cart-add">Добавить в корзину</button>
+                    </div>
+                </div>
+            </section>
+
+            @@include('html/_products.htm',{
+            "title":"Популярные товары"
+            })
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

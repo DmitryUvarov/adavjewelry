@@ -39,6 +39,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: toRem(8);
   padding: toRem(5) toRem(20);
 
   border-radius: toRem(3);

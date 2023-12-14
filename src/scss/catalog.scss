@@ -204,13 +204,17 @@
 
     &::before {
       font-size: toRem(24);
+      transition: transform 0.3s ease 0s;
+      .show & {
+        transform: rotate(180deg);
+      }
     }
 
     span {
       &:last-child {
         display: none;
       }
-      ._showmore-active & {
+      .show & {
         display: none;
         &:last-child {
           display: block;

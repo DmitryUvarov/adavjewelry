@@ -57,3 +57,35 @@
     }
   }
 }
+
+//========================================================================================================================================================
+
+.checkbox-num {
+  position: relative;
+
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    &:checked + .checkbox-num__label {
+      border-color: #312200;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    border-radius: toRem(3);
+    border: toRem(1) solid #dbd6d2;
+    display: inline-block;
+
+    padding: toRem(8) toRem(16);
+    color: #312200;
+    font-size: toRem(14);
+    line-height: 142.9%; /* 20/14 */
+  }
+
+  &__text {
+  }
+}

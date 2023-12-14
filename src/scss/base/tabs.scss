@@ -1,23 +1,90 @@
 .tabs {
-	// .tabs__navigation
-	&__navigation {
-		display: flex;
-	}
-	// .tabs__title
-	&__title {
-		border: 1px solid #eee;
-		padding: toRem(10) toRem(15);
-		border-radius: toRem(5);
-		&._tab-active {
-			border: 1px solid #000;
-		}
-	}
-	// .tabs__content
-	&__content {
-		border: 1px solid #eee;
-		padding: toRem(10) toRem(15);
-	}
-	// .tabs__body
-	&__body {
-	}
+  // .tabs__navigation
+  display: flex;
+  @include adaptiveValue("gap", 53, 15, 0, 1420, 767);
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+  &__navigation {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    background: rgba(219, 214, 210, 0.1);
+
+    @media (min-width: $mobile) {
+      flex: 0 0 percent(653, 1390);
+    }
+    @media (min-width: $tablet) {
+      padding: toRem(30) toRem(25);
+    }
+    @media (max-width: $tablet) {
+      padding: toRem(10);
+    }
+  }
+  // .tabs__title
+  &__title {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: toRem(10);
+
+    padding: toRem(10) toRem(15);
+
+    padding-right: toRem(60);
+    @media (max-width: $mobile) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    color: #312200;
+    font-size: toRem(20);
+    font-weight: 600;
+    line-height: 120%; /* 24/20 */
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 35, 5, 0, 1420, 767);
+    }
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #e8c886;
+      }
+    }
+
+    &::after {
+      content: "\e901";
+      @extend %ic;
+      font-size: toRem(27);
+      height: toRem(50);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateY(toRem(-3));
+    }
+
+    &._tab-active {
+      color: #e8c886;
+
+      &::after {
+        font-size: toRem(50);
+        content: "\e902";
+      }
+    }
+  }
+  // .tabs__content
+  &__content {
+    flex: 1 1 auto;
+  }
+  // .tabs__body
+  &__body {
+  }
 }

@@ -3,15 +3,100 @@
 [data-showmore-content] {
 }
 [data-showmore-button] {
-	span {
-		&:last-child {
-			display: none;
-		}
-		._showmore-active & {
-			display: none;
-			&:last-child {
-				display: block;
-			}
-		}
-	}
+  span {
+    &:last-child {
+      display: none;
+    }
+    ._showmore-active & {
+      display: none;
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.showmore {
+  &__content {
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 133.3%; /* 32/24 */
+    p {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 30, 10);
+      }
+    }
+  }
+
+  &__more {
+    @include adaptiveValue("margin-top", 30, 20);
+    width: fit-content;
+    position: relative;
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 133.3%; /* 32/24 */
+    transition: color 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #e8c886;
+        &::before {
+          background-color: #e8c886;
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: toRem(1);
+      bottom: 0;
+      left: 0;
+      background-color: #312200;
+      transition: background-color 0.3s ease 0s;
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.showmore-line {
+  &__content {
+  }
+
+  &__line {
+  }
+
+  &__more {
+    margin-top: toRem(20);
+    width: fit-content;
+    position: relative;
+    color: #312200;
+    font-size: toRem(16);
+    font-weight: 500;
+    line-height: 118.8%; /* 19/16 */
+
+    transition: color 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #e8c886;
+        &::before {
+          background-color: #e8c886;
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: toRem(1);
+      bottom: 0;
+      left: 0;
+      background-color: #312200;
+      transition: background-color 0.3s ease 0s;
+    }
+  }
 }

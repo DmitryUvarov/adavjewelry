@@ -97,7 +97,7 @@
     &:not(:last-child) {
       &::after {
         content: "——";
-        margin: 0 toRem(10);
+        margin: 0 toRem(5);
         font-size: toRem(10);
       }
     }
@@ -115,6 +115,60 @@
 
   &__current {
     color: #e8c886;
+  }
+}
+
+//========================================================================================================================================================
+
+.line {
+  position: relative;
+  color: #312200;
+  @include adaptiveValue("font-size", 16, 14);
+  font-weight: 600;
+  line-height: 118.8%; /* 19/16 */
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  @media (max-width: $mobile) {
+    font-size: toRem(18);
+    font-weight: 400;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: toRem(15);
+  }
+
+  span {
+    display: block;
+    padding-bottom: toRem(2);
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+
+    &:first-child {
+      padding-right: toRem(5);
+    }
+    &:last-child {
+      font-weight: 400;
+      padding-left: toRem(5);
+
+      @media (max-width: $mobile) {
+        font-weight: 300;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: toRem(1);
+    bottom: toRem(1);
+    left: 0;
+    background-color: #ece6e2;
+    z-index: 1;
   }
 }
 
