@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<section class="hero">
+				<div class="hero__container">
+					<div class="hero__slider swiper">
+						<div class="hero__wrapper swiper-wrapper">
+							<div class="hero__slide swiper-slide">
+								<div class="hero__image-ibg">
+									<picture>
+										<source srcset="img/hero/small01.jpg" type="image/webp" media="(max-width:767px)">
+										<source srcset="img/hero/02.jpg" type="image/webp">
+										<img src="@img/hero/02.jpg" alt="">
+									</picture>
+								</div>
+								<h1 class="hero__title">
+									<p>Adav</p>
+									<p>jewelry</p>
+								</h1>
+								<div class="hero__text">
+									<p>Мы уделяем особое внимание качеству и дизайну, чтобы предложить нашим клиентам неповторимые украшения, которые подчеркнут их индивидуальность и стиль</p>
+								</div>
+							</div>
+						</div>
+						<div class="hero__pagination pagination"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="about">
+				<div class="about__container">
+					<h2 class="about__title title">О КОмпании</h2>
+					<div class="about__items">
+						<div class="about__item item-about">
+							<div class="item-about__text">14 лет радуем клиентов украшениями высшей пробы</div>
+						</div>
+						<div class="about__item item-about item-about_big">
+							<div class="item-about__text">В нашем ассортименте представлены украшения на любой вкус</div>
+							<div class="item-about__image-ibg"><img src="@img/about/01.jpg" alt=""></div>
+						</div>
+						<div class="about__item item-about item-about_image">
+							<div class="item-about__image-ibg"><img src="@img/about/02.jpg" alt=""></div>
+						</div>
+						<div class="about__item item-about item-about_gradient">
+							<div class="item-about__text">Более 2500 довольных клиентов</div>
+						</div>
+						<div class="about__item item-about item-about_image">
+							<div class="item-about__image-ibg"><img src="@img/about/02.jpg" alt=""></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			@@include('html/_ware.htm',{})
+
+			<section class="test">
+				<div class="test__container">
+					<div class="test__body">
+
+					</div>
+				</div>
+			</section>
+
+			<section class="blog">
+				<div class="blog__container">
+					<h2 class="blog__title title">Блог</h2>
+					<div class="blog__slider">
+						<div class="blog__wrapper swiper-wrapper">
+							<article class="blog__slide swiper-slide item-blog">
+								<a href="#" class="item-blog__image-ibg"><img src="@img/blog/01.jpg" alt=""></a>
+								<h4 class="item-blog__title"><a href="#">Как определить форму лица</a></h4>
+								<div class="item-blog__date">10.10.2023</div>
+							</article>
+							<article class="blog__slide swiper-slide item-blog">
+								<a href="#" class="item-blog__image-ibg"><img src="@img/blog/02.jpg" alt=""></a>
+								<h4 class="item-blog__title"><a href="#">Браслеты желаний</a></h4>
+								<div class="item-blog__date">10.10.2023</div>
+							</article>
+							<article class="blog__slide swiper-slide item-blog">
+								<a href="#" class="item-blog__image-ibg"><img src="@img/blog/03.jpg" alt=""></a>
+								<h4 class="item-blog__title"><a href="#">Свадебные годовщины -
+										что дарить</a></h4>
+								<div class="item-blog__date">10.10.2023</div>
+							</article>
+							<article class="blog__slide swiper-slide item-blog">
+								<a href="#" class="item-blog__image-ibg"><img src="@img/blog/04.jpg" alt=""></a>
+								<h4 class="item-blog__title"><a href="#">Как определить форму лица</a></h4>
+								<div class="item-blog__date">10.10.2023</div>
+							</article>
+							<article class="blog__slide swiper-slide item-blog">
+								<a href="#" class="item-blog__image-ibg"><img src="@img/blog/05.jpg" alt=""></a>
+								<h4 class="item-blog__title"><a href="#">Браслеты желаний</a></h4>
+								<div class="item-blog__date">10.10.2023</div>
+							</article>
+							<article class="blog__slide swiper-slide item-blog">
+								<a href="#" class="item-blog__image-ibg"><img src="@img/blog/01.jpg" alt=""></a>
+								<h4 class="item-blog__title"><a href="#">Как определить форму лица</a></h4>
+								<div class="item-blog__date">10.10.2023</div>
+							</article>
+							<article class="blog__slide swiper-slide item-blog">
+								<a href="#" class="item-blog__image-ibg"><img src="@img/blog/02.jpg" alt=""></a>
+								<h4 class="item-blog__title"><a href="#">Браслеты желаний</a></h4>
+								<div class="item-blog__date">10.10.2023</div>
+							</article>
+							<article class="blog__slide swiper-slide item-blog">
+								<a href="#" class="item-blog__image-ibg"><img src="@img/blog/03.jpg" alt=""></a>
+								<h4 class="item-blog__title"><a href="#">Свадебные годовщины -
+										что дарить</a></h4>
+								<div class="item-blog__date">10.10.2023</div>
+							</article>
+							<article class="blog__slide swiper-slide item-blog">
+								<a href="#" class="item-blog__image-ibg"><img src="@img/blog/04.jpg" alt=""></a>
+								<h4 class="item-blog__title"><a href="#">Как определить форму лица</a></h4>
+								<div class="item-blog__date">10.10.2023</div>
+							</article>
+							<article class="blog__slide swiper-slide item-blog">
+								<a href="#" class="item-blog__image-ibg"><img src="@img/blog/05.jpg" alt=""></a>
+								<h4 class="item-blog__title"><a href="#">Браслеты желаний</a></h4>
+								<div class="item-blog__date">10.10.2023</div>
+							</article>
+						</div>
+						<div class="blog__navigation navigation">
+							<button class="navigation__button button-prev _icon-prev"></button>
+							<button class="navigation__button button-next _icon-next"></button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
