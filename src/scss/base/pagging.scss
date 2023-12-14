@@ -1,19 +1,66 @@
 .pagging {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	// .pagging__arrow
-	&__arrow {
-	}
-	// .pagging__list
-	&__list {
-		display: flex;
-		li {
-		}
-	}
-	// .pagging__item
-	&__item {
-		&._active {
-		}
-	}
+  display: flex;
+  align-items: center;
+  @include adaptiveValue("gap", 8, 4);
+
+  font-size: toRem(14);
+  line-height: 142.9%; /* 20/14 */
+
+  // .pagging__arrow
+  &__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: toRem(5);
+    border-radius: toRem(3);
+    @include adaptiveValue("height", 36, 30);
+
+    padding-left: toRem(8);
+    padding-right: toRem(8);
+
+    background: #dbd6d2;
+    border: toRem(1) solid #dbd6d2;
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #fff;
+        border-color: #312200;
+      }
+    }
+    &._icon-next {
+      flex-direction: row-reverse;
+    }
+  }
+  // .pagging__list
+  &__list {
+    display: flex;
+    @include adaptiveValue("gap", 8, 4);
+    li {
+    }
+  }
+  // .pagging__item
+  &__item {
+    border-radius: toRem(3);
+    @include adaptiveValue("width", 36, 30);
+    @include adaptiveValue("height", 36, 30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dbd6d2;
+    border: toRem(1) solid #dbd6d2;
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #fff;
+        border-color: #312200;
+      }
+    }
+
+    &._active {
+      background-color: #fff;
+      border: toRem(1) solid #312200;
+    }
+  }
 }

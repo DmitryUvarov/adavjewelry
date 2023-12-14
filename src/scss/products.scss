@@ -77,7 +77,7 @@
   flex-direction: column;
   background-color: #fff;
 
-  padding-bottom: toRem(20);
+  // padding-bottom: toRem(20);
 
   &::before {
     content: "";
@@ -215,6 +215,7 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    z-index: 2;
 
     &::before {
       content: "";
@@ -237,6 +238,7 @@
       top: 0;
       left: 0;
       padding-top: toRem(20);
+      padding-bottom: toRem(0);
       &::before {
         border: none;
       }

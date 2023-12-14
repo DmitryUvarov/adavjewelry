@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Каталог"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="catalog">
+                <div class="catalog__container">
+                    <div class="catalog__breadcrumbs breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная </a></li>
+                            <li class="breadcrumbs__item"><span class="breadcrumbs__current">Каталог</span></li>
+                        </ul>
+                    </div>
+                    <h1 class="catalog__title">Каталог ювелирных изделий <span>691</span></h1>
+                    <div class="catalog__body">
+
+                        <div class="catalog__control">
+
+                            <div class="catalog__open" data-filter>
+                                <div class="catalog__open-ico">
+                                    <img src="@img/filter.svg" alt="">
+                                </div>
+                                <span>Фильтр</span>
+                            </div>
+                            <div class="catalog__control-body" data-spollers="767,max">
+                                <div class="catalog__control-top">
+                                    <div class="catalog__control-title">Фильтр</div>
+                                    <div class="catalog__control-button _icon-close" data-filter-close></div>
+                                </div>
+                                <div class="catalog__category category">
+                                    <div class="category__items">
+                                        <button class="category__item ">Золото</button>
+                                        <button class="category__item">Серебро</button>
+                                        <button class="category__item">Кольца</button>
+                                        <button class="category__item active">Серьги</button>
+                                        <button class="category__item">Браслеты</button>
+                                        <button class="category__item">Цепи</button>
+                                        <button class="category__item">подвески</button>
+                                        <button class="category__item">Помолвка</button>
+                                        <button class="category__item">Свадьба</button>
+                                        <button class="category__item">В подарок</button>
+                                        <button class="category__item">Для мужчин</button>
+                                        <button class="category__item">Детям</button>
+                                    </div>
+                                    <div class="category__more _icon-angle"><span>еще</span><span>свернуть</span></div>
+                                </div>
+                                <div class="catalog__filters filters">
+                                    <div class="filters__lists">
+                                        <div class="filters__list">
+                                            <div class="filters__title _spoller-active" data-spoller>Цена</div>
+                                            <div class="filters__sublist">
+                                                <div class="filters__range range">
+                                                    <input gata-value autocomplete="off" type="text" name="price" placeholder="0 - 100 000 000 сум" class="range__input">
+                                                    <div class="range__line" gata-range data-from="0" data-to="100000000"></div>
+                                                    <div class="range__bottom">
+                                                        <span>0</span>
+                                                        <span>100.000.000 сум</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filters__list">
+                                            <div class="filters__title" data-spoller>Изделие</div>
+                                            <div class="filters__sublist">
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="c_1" class="checkbox__label"><span class="checkbox__text">Обручальные кольца</span></label>
+                                                </div>
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="c_2" class="checkbox__label"><span class="checkbox__text">Помолвочные кольца</span></label>
+                                                </div>
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="c_3" class="checkbox__label"><span class="checkbox__text">Кольца с камнями </span></label>
+                                                </div>
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="c_4" class="checkbox__label"><span class="checkbox__text">Кольца с бриллиантами </span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filters__list">
+                                            <div class="filters__title" data-spoller>Для кого</div>
+                                            <div class="filters__sublist">
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="v_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="v_1" class="checkbox__label"><span class="checkbox__text">Обручальные кольца</span></label>
+                                                </div>
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="v_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="v_2" class="checkbox__label"><span class="checkbox__text">Помолвочные кольца</span></label>
+                                                </div>
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="v_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="v_3" class="checkbox__label"><span class="checkbox__text">Кольца с камнями </span></label>
+                                                </div>
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="v_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="v_4" class="checkbox__label"><span class="checkbox__text">Кольца с бриллиантами </span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filters__list">
+                                            <div class="filters__title" data-spoller>металл</div>
+                                            <div class="filters__sublist">
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="b_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="b_1" class="checkbox__label"><span class="checkbox__text">Обручальные кольца</span></label>
+                                                </div>
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="b_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="b_2" class="checkbox__label"><span class="checkbox__text">Помолвочные кольца</span></label>
+                                                </div>
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="b_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="b_3" class="checkbox__label"><span class="checkbox__text">Кольца с камнями </span></label>
+                                                </div>
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="b_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="b_4" class="checkbox__label"><span class="checkbox__text">Кольца с бриллиантами </span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filters__list">
+                                            <div class="filters__title" data-spoller>проба</div>
+                                            <div class="filters__sublist">
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="n_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="n_1" class="checkbox__label"><span class="checkbox__text">Обручальные кольца</span></label>
+                                                </div>
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="n_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="n_2" class="checkbox__label"><span class="checkbox__text">Помолвочные кольца</span></label>
+                                                </div>
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="n_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="n_3" class="checkbox__label"><span class="checkbox__text">Кольца с камнями </span></label>
+                                                </div>
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="n_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="n_4" class="checkbox__label"><span class="checkbox__text">Кольца с бриллиантами </span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filters__list">
+                                            <div class="filters__title" data-spoller>Вставка</div>
+                                            <div class="filters__sublist">
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="m_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="m_1" class="checkbox__label"><span class="checkbox__text">Обручальные кольца</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filters__lists">
+                                        <div class="filters__list">
+                                            <div class="filters__title" data-spoller>по популярности</div>
+                                            <div class="filters__sublist">
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="x_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="x_1" class="checkbox__label"><span class="checkbox__text">По популярности</span></label>
+                                                </div>
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="x_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="x_2" class="checkbox__label"><span class="checkbox__text">По возрастанию цены</span></label>
+                                                </div>
+                                                <div class="filters__checkbox checkbox">
+                                                    <input id="x_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+                                                    <label for="x_3" class="checkbox__label"><span class="checkbox__text">По убыванию цены </span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="catalog__items">
+                            <article class="catalog__item item-product">
+                                <div class="item-product__image-ibg--contain">
+                                    <a href="#"><img src="@img/products/01.jpg" alt=""></a>
+                                    <div class="item-product__labels">
+                                        <div class="item-product__label">sale</div>
+                                    </div>
+                                    <button class="item-product__favorite _icon-favorite"></button>
+                                </div>
+                                <div class="item-product__content">
+                                    <h3 class="item-product__title"><a href="#">Колье Serena Necklace – Black</a></h3>
+                                    <div class="item-product__price price">
+                                        <div class="price__current">110 000 сум</div>
+                                        <div class="price__old">220 000 сум</div>
+                                        <div class="price__percent">-22%</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__buttons">
+                                    <button class="item-product__button button">Добавить в корзину</button>
+                                    <button class="products__button button-line">Купить в 1 клик</button>
+                                </div>
+                            </article>
+                            <article class="catalog__item item-product">
+                                <div class="item-product__image-ibg--contain">
+                                    <a href="#"><img src="@img/products/02.jpg" alt=""></a>
+                                    <div class="item-product__labels">
+                                        <div class="item-product__label">new</div>
+                                        <div class="item-product__label">sale</div>
+                                    </div>
+                                    <button class="item-product__favorite _icon-favorite active"></button>
+                                    <!-- используй этот класс "_icon-favorite-active" или просто добавляй этот "active" к дефолтному класу -->
+                                </div>
+                                <div class="item-product__content">
+                                    <h3 class="item-product__title"><a href="#">Моносерьга Nostalgia Bear Hoop </a></h3>
+                                    <div class="item-product__price price">
+                                        <div class="price__current">110 000 сум</div>
+                                        <div class="price__old">220 000 сум</div>
+                                        <div class="price__percent">-22%</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__buttons">
+                                    <button class="item-product__button button _icon-cart-added">Добавлено в корзину</button>
+                                    <button class="products__button button-line">Купить в 1 клик</button>
+                                </div>
+                            </article>
+                            <article class="catalog__item item-product">
+                                <div class="item-product__image-ibg--contain">
+                                    <a href="#"><img src="@img/products/03.jpg" alt=""></a>
+                                    <button class="item-product__favorite _icon-favorite"></button>
+                                </div>
+                                <div class="item-product__content">
+                                    <h3 class="item-product__title"><a href="#">Колье Medusa Chain</a></h3>
+                                    <div class="item-product__price price">
+                                        <div class="price__current">110 000 сум</div>
+                                        <div class="price__old">220 000 сум</div>
+                                        <div class="price__percent">-22%</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__buttons">
+                                    <button class="item-product__button button">Добавить в корзину</button>
+                                    <button class="products__button button-line">Купить в 1 клик</button>
+                                </div>
+                            </article>
+                            <article class="catalog__item item-product">
+                                <div class="item-product__image-ibg--contain">
+                                    <a href="#"><img src="@img/products/02.jpg" alt=""></a>
+                                    <div class="item-product__labels">
+                                        <div class="item-product__label">sale</div>
+                                    </div>
+                                    <button class="item-product__favorite _icon-favorite"></button>
+                                </div>
+                                <div class="item-product__content">
+                                    <h3 class="item-product__title"><a href="#">Моносерьга Nostalgia Bear Hoop </a></h3>
+                                    <div class="item-product__price price">
+                                        <div class="price__current">110 000 сум</div>
+                                        <div class="price__old">220 000 сум</div>
+                                        <div class="price__percent">-22%</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__buttons">
+                                    <button class="item-product__button button">Добавить в корзину</button>
+                                    <button class="item-product__button button-line">Купить в 1 клик</button>
+                                </div>
+                            </article>
+                            <article class="catalog__item item-product">
+                                <div class="item-product__image-ibg--contain">
+                                    <a href="#"><img src="@img/products/01.jpg" alt=""></a>
+                                    <div class="item-product__labels">
+                                        <div class="item-product__label">sale</div>
+                                    </div>
+                                    <button class="item-product__favorite _icon-favorite"></button>
+                                </div>
+                                <div class="item-product__content">
+                                    <h3 class="item-product__title"><a href="#">Колье Serena Necklace – Black</a></h3>
+                                    <div class="item-product__price price">
+                                        <div class="price__current">110 000 сум</div>
+                                        <div class="price__old">220 000 сум</div>
+                                        <div class="price__percent">-22%</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__buttons">
+                                    <button class="item-product__button button">Добавить в корзину</button>
+                                    <button class="products__button button-line">Купить в 1 клик</button>
+                                </div>
+                            </article>
+                            <article class="catalog__item item-product">
+                                <div class="item-product__image-ibg--contain">
+                                    <a href="#"><img src="@img/products/02.jpg" alt=""></a>
+                                    <div class="item-product__labels">
+                                        <div class="item-product__label">new</div>
+                                        <div class="item-product__label">sale</div>
+                                    </div>
+                                    <button class="item-product__favorite _icon-favorite active"></button>
+                                    <!-- используй этот класс "_icon-favorite-active" или просто добавляй этот "active" к дефолтному класу -->
+                                </div>
+                                <div class="item-product__content">
+                                    <h3 class="item-product__title"><a href="#">Моносерьга Nostalgia Bear Hoop </a></h3>
+                                    <div class="item-product__price price">
+                                        <div class="price__current">110 000 сум</div>
+                                        <div class="price__old">220 000 сум</div>
+                                        <div class="price__percent">-22%</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__buttons">
+                                    <button class="item-product__button button _icon-cart-added">Добавлено в корзину</button>
+                                    <button class="products__button button-line">Купить в 1 клик</button>
+                                </div>
+                            </article>
+                            <article class="catalog__item item-product">
+                                <div class="item-product__image-ibg--contain">
+                                    <a href="#"><img src="@img/products/03.jpg" alt=""></a>
+                                    <button class="item-product__favorite _icon-favorite"></button>
+                                </div>
+                                <div class="item-product__content">
+                                    <h3 class="item-product__title"><a href="#">Колье Medusa Chain</a></h3>
+                                    <div class="item-product__price price">
+                                        <div class="price__current">110 000 сум</div>
+                                        <div class="price__old">220 000 сум</div>
+                                        <div class="price__percent">-22%</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__buttons">
+                                    <button class="item-product__button button">Добавить в корзину</button>
+                                    <button class="products__button button-line">Купить в 1 клик</button>
+                                </div>
+                            </article>
+                            <article class="catalog__item item-product">
+                                <div class="item-product__image-ibg--contain">
+                                    <a href="#"><img src="@img/products/03.jpg" alt=""></a>
+                                    <button class="item-product__favorite _icon-favorite"></button>
+                                </div>
+                                <div class="item-product__content">
+                                    <h3 class="item-product__title"><a href="#">Колье Medusa Chain</a></h3>
+                                    <div class="item-product__price price">
+                                        <div class="price__current">110 000 сум</div>
+                                        <div class="price__old">220 000 сум</div>
+                                        <div class="price__percent">-22%</div>
+                                    </div>
+                                </div>
+                                <div class="item-product__buttons">
+                                    <button class="item-product__button button">Добавить в корзину</button>
+                                    <button class="products__button button-line">Купить в 1 клик</button>
+                                </div>
+                            </article>
+                        </div>
+                        @@include('html/_pagging.htm',{})
+                    </div>
+                </div>
+            </section>
+
+            @@include('html/_products.htm',{
+            "title":"Популярные товары"
+            })
+
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
