@@ -126,7 +126,43 @@ function initSliders() {
 		},
 
 	});
+
 }
+
+	if (document.querySelector('.products__slider')) {
+		new Swiper('.products__slider', {
+		modules: [Navigation],
+		observer: true,
+		observeParents: true,
+		speed: 800,
+
+		navigation: {
+			prevEl: '.products__slider .button-prev',
+			nextEl: '.products__slider .button-next',
+		},
+
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1330: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+		},
+
+	});
+}
+
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {

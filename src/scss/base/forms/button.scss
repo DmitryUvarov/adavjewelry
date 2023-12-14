@@ -2,13 +2,60 @@
 // Сніппет (HTML): btn
 
 .button {
-	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
-		}
-	}
-	&--fw {
-		width: 100%;
-	}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: toRem(8);
+  padding: toRem(5) toRem(20);
+
+  border-radius: toRem(3);
+  background: #e8c886;
+  border: toRem(1) solid #e8c886;
+
+  color: #312200;
+  font-family: "Inter";
+  font-size: toRem(14);
+  font-weight: 400;
+  line-height: 142.9%; /* 20/14 */
+
+  height: toRem(48);
+
+  &::before {
+    font-size: toRem(26);
+  }
+
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  &--fw {
+    width: 100%;
+  }
+}
+
+.button-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: toRem(5) toRem(20);
+
+  border-radius: toRem(3);
+  border: toRem(1) solid #e8c886;
+
+  color: #312200;
+  font-family: "Inter";
+  font-size: toRem(14);
+  font-weight: 400;
+  line-height: 142.9%; /* 20/14 */
+
+  height: toRem(48);
+
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #e8c886;
+    }
+  }
 }
