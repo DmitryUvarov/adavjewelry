@@ -327,6 +327,12 @@
       transition: all 0.3s ease 0s;
     }
 
+    @extend %scrollbar;
+
+    &::-webkit-scrollbar {
+      width: toRem(10); /* Ширина скроллбара */
+    }
+
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -443,6 +449,12 @@
       border-top: toRem(1) solid #e8c886;
       border-bottom: toRem(1) solid #e8c886;
       border-right: toRem(1) solid #e8c886;
+    }
+
+    @extend %scrollbar;
+
+    &::-webkit-scrollbar {
+      width: toRem(7); /* Ширина скроллбара */
     }
   }
 
