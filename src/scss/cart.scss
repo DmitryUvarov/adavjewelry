@@ -1,0 +1,175 @@
+.cart {
+  @include adaptiveValue("padding-top", 60, 35);
+  @include adaptiveValue("padding-bottom", 120, 45);
+  &__container {
+    border-top: toRem(1) solid #dbd6d2;
+    padding-top: toRem(20);
+  }
+
+  &__title {
+    margin-bottom: toRem(20);
+  }
+
+  &__items {
+  }
+
+  &__item {
+    border-bottom: toRem(1) solid #dbd6d2;
+  }
+
+  &__bottom {
+    @include adaptiveValue("margin-top", 50, 35);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: toRem(15);
+  }
+
+  &__subtitle {
+    text-transform: none;
+  }
+
+  &__all-price {
+    @include adaptiveValue("font-size", 36, 22);
+    font-weight: 600;
+    line-height: 100%; /* 64.806% */
+  }
+
+  &__button {
+    @include adaptiveValue("margin-top", 100, 35);
+    width: 100%;
+    @include adaptiveValue("height", 88, 48);
+    @include adaptiveValue("font-size", 24, 18);
+  }
+}
+
+.item-cart {
+  display: flex;
+  @include adaptiveValue("column-gap", 35, 15, 0, 1420, 767);
+  row-gap: toRem(20);
+  @include adaptiveValue("padding-bottom", 30, 20, 0, 1420, 767);
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  &:not(:last-child) {
+    @include adaptiveValue("margin-bottom", 30, 20, 0, 1420, 767);
+  }
+  &__image-ibg--contain {
+    height: fit-content;
+    border-radius: toRem(20);
+    border: toRem(1) solid #dbd6d2;
+    background: #fff;
+    padding-bottom: percent(325, 1390);
+    @media (min-width: $mobile) {
+      flex: 0 0 percent(325, 1390);
+    }
+    @media (max-width: $mobile) {
+      max-width: toRem(350);
+      height: toRem(350);
+    }
+    @media (max-width: em(660)) {
+      max-width: none;
+      height: auto;
+      padding-bottom: 100%;
+    }
+
+    img {
+      overflow: hidden;
+      border-radius: toRem(20);
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(15);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 28, 20);
+    }
+  }
+
+  &__name {
+  }
+
+  &__title {
+    font-family: "Playfair Display";
+    @include adaptiveValue("font-size", 30, 24);
+    line-height: 120%; /* 36px */
+
+    margin-bottom: toRem(10);
+  }
+
+  &__article {
+    color: #dbd6d2;
+    font-size: toRem(14);
+    line-height: 142.9%; /* 20/14 */
+  }
+
+  &__price {
+    font-weight: 600;
+    line-height: toRem(36); /* 24/20 */
+
+    @media (min-width: $mobile) {
+      @include adaptiveValue("font-size", 20, 18);
+    }
+    @media (max-width: $mobile) {
+      font-size: toRem(20);
+    }
+  }
+
+  &__line {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(20);
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 133.3%; /* 32/24 */
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 35, 20);
+    }
+
+    span {
+      @include adaptiveValue("font-size", 20, 16);
+      font-weight: 600;
+      line-height: 120%; /* 24/20 */
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.cart-empty {
+  padding-top: toRem(60);
+  padding-bottom: toRem(120);
+  &__container {
+  }
+
+  &__button {
+    width: 100%;
+    @include adaptiveValue("height", 88, 48);
+    @include adaptiveValue("font-size", 24, 18);
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 15);
+    }
+
+    &.button {
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: #e8c886;
+        }
+      }
+    }
+  }
+}
