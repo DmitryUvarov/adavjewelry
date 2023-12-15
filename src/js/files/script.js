@@ -77,8 +77,6 @@ function pageLoad() {
 
         /////////////////
 
-        // Находим элементы на странице
-
       let amount = document.querySelector('[data-amount]');
       if (amount) {
             let amountValueElement = document.querySelector('[data-amount-value]');
@@ -110,6 +108,31 @@ function pageLoad() {
                 updateValue(10000);
             });
       }
+
+      ///////////////////
+
+      let textareaBlock = document.querySelector('[data-textarea]');
+      if (textareaBlock) {
+        let textarea = textareaBlock.querySelector('textarea');
+        let enteredSpan = textareaBlock.querySelector('[data-entered]');
+
+        // Максимальное количество символов
+        let maxLength = textarea.getAttribute('maxlength');
+
+        // Обработчик события ввода в текстовое поле
+        textarea.addEventListener('input', function() {
+          let enteredText = textarea.value.length;
+          enteredSpan.textContent = enteredText;
+
+          // Добавляем/удаляем класс .full в зависимости от достижения лимита
+          if (enteredText >= maxLength) {
+            textareaBlock.classList.add('full');
+          } else {
+            textareaBlock.classList.remove('full');
+          }
+        });
+      }
+
 
 
 }

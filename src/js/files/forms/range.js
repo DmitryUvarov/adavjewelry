@@ -9,7 +9,7 @@ import * as noUiSlider from 'nouislider';
 
 export function rangeInit() {
 	const priceSliders = document.querySelectorAll('[gata-range]');
-	console.log('priceSliders', priceSliders);
+
 	if (priceSliders) {
 
 		priceSliders.forEach(priceSlider => {

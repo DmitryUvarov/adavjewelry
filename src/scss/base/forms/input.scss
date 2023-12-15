@@ -4,31 +4,74 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .input {
-	border-radius: 0 !important;
-	width: 100%;
-	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
-	&._form-focus {
-	}
-	&._form-error {
-	}
+  width: 100%;
+  display: block;
+  padding: toRem(0) toRem(16);
+  border: toRem(1) solid #dbd6d2;
+  border-radius: 3px;
+
+  color: rgba(49, 34, 0, 1);
+  font-family: Inter;
+  font-size: toRem(14);
+  font-weight: 400;
+  line-height: 142.9%; /* 20/14 */
+
+  height: toRem(40);
+
+  &::placeholder {
+    color: rgba(49, 34, 0, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #000;
+  }
+
+  &._form-focus {
+  }
+  &._form-error {
+  }
 }
 .input[placeholder]:not([data-placeholder-nohiden]) {
-	&::placeholder {
-		transition: opacity 0.3s;
-	}
-	&:focus::placeholder {
-		opacity: 0;
-	}
+  &::placeholder {
+    transition: opacity 0.3s;
+  }
+  &:focus::placeholder {
+    opacity: 0;
+  }
 }
 
 textarea.input {
-	resize: none;
-	padding: 0px 0px;
+  resize: vertical;
+  padding: toRem(10) toRem(16);
+  min-height: toRem(100);
+
+  @extend %scrollbar;
+}
+
+//========================================================================================================================================================
+
+.textarea-block {
+  &__bottom {
+    font-size: toRem(12);
+    line-height: 133.3%; /* 16/12 */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: toRem(0) toRem(15);
+
+    span {
+      &:nth-child(2) {
+        .full & {
+          color: red;
+        }
+      }
+    }
+  }
 }

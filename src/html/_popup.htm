@@ -1,10 +1,166 @@
-<div id="popup" aria-hidden="true" class="popup">
+<div id="fast" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
+			<button data-close type="button" class="popup__close _icon-close"></button>
+
+			<div class="popup__title">Быстрый заказ</div>
+
+			<div class="popup__cart cart-popup">
+				<div class="cart-popup__items">
+					<div class="cart-popup__item">
+						<div class="cart-popup__top">
+							<div class="cart-popup__image-ibg--contain"><img src="@img/cart/small01.jpg" alt=""></div>
+							<div class="cart-popup__title">Обручальное кольцо с бриллиантом</div>
+						</div>
+						<div class="cart-popup__price price">
+							<div class="price__current">110 000 сум</div>
+							<div class="price__old">220 000 сум</div>
+							<div class="price__percent">-22%</div>
+						</div>
+					</div>
+				</div>
+
+				<form action="#" class="cart-popup__form form-contact">
+					<div class="form-contact__gruup">
+						<div class="form-contact__title">Выберите место доставки:</div>
+						<div class="form-contact__place">
+							<div class="form-contact__checkbox checkbox-num">
+								<input id="p_1" data-error="Ошибка" class="checkbox-num__input" type="radio" value="1" name="form[]">
+								<label for="p_1" class="checkbox-num__label"><span class="checkbox-num__text">Ташкент</span></label>
+							</div>
+							<div class="form-contact__checkbox checkbox-num">
+								<input id="p_2" data-error="Ошибка" class="checkbox-num__input" type="radio" value="1" name="form[]">
+								<label for="p_2" class="checkbox-num__label"><span class="checkbox-num__text">Узбекистан</span></label>
+							</div>
+							<div class="form-contact__checkbox checkbox-num">
+								<input id="p_3" data-error="Ошибка" class="checkbox-num__input" type="radio" value="1" name="form[]">
+								<label for="p_3" class="checkbox-num__label"><span class="checkbox-num__text">Весь мир</span></label>
+							</div>
+						</div>
+					</div>
+					<div class="form-contact__gruup">
+						<div class="form-contact__title">Личные данные:</div>
+						<div class="form-contact__subtitle">Все поля обязательны к заполнению</div>
+						<input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя" class="form-contact__input input">
+						<input autocomplete="off" type="text" name="form[]" placeholder="Ваш телефон" class="form-contact__input input">
+						<div class="form-contact__subtitle">Удобный способ связи:</div>
+						<div class="form-contact__communicat">
+							<div class="checkbox-communicat">
+								<input id="q_1" data-error="Ошибка" class="checkbox-communicat__input" type="radio" value="1" name="form[]">
+								<label for="q_1" class="checkbox-communicat__label _icon-telegram"></label>
+							</div>
+							<div class="checkbox-communicat">
+								<input id="q_2" data-error="Ошибка" class="checkbox-communicat__input" type="radio" value="1" name="form[]">
+								<label for="q_2" class="checkbox-communicat__label _icon-whatsapp"></label>
+							</div>
+							<div class="checkbox-communicat">
+								<input id="q_3" data-error="Ошибка" class="checkbox-communicat__input" type="radio" value="1" name="form[]">
+								<label for="q_3" class="checkbox-communicat__label"><span class="checkbox-communicat__text">Позвонить</span></label>
+							</div>
+						</div>
+						<button type="submit" class="form-contact__button button">Оформить заказ</button>
+					</div>
+				</form>
+
 			</div>
+
 		</div>
 	</div>
+</div>
+
+
+<!-- =================================== -->
+
+<div id="individual" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close _icon-close"></button>
+
+			<div class="popup__title">Индивидуальный заказ</div>
+
+			<div class="popup__cart cart-popup">
+
+				<form action="#" class="cart-popup__form form-contact">
+					<div class="form-contact__gruup">
+						<div class="form-contact__title">Личные данные:</div>
+						<div class="form-contact__subtitle">Все поля обязательны к заполнению</div>
+						<input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя" class="form-contact__input input">
+						<input autocomplete="off" type="text" name="form[]" placeholder="Ваш телефон" class="form-contact__input input">
+						<div class="form-contact__textarea-block textarea-block" data-textarea>
+							<textarea maxlength="3000" autocomplete="off" type="text" name="form[]" placeholder="Описание заказа" class="form-contact__input input"></textarea>
+							<div class="textarea-block__bottom">
+								<span>Введено символов</span>
+								<span><span data-entered>0</span> / 3000</span>
+							</div>
+						</div>
+
+
+						<div class="form-contact__subtitle">Удобный способ связи:</div>
+						<div class="form-contact__communicat">
+							<div class="checkbox-communicat">
+								<input id="o_1" data-error="Ошибка" class="checkbox-communicat__input" type="radio" value="1" name="form[]">
+								<label for="o_1" class="checkbox-communicat__label _icon-telegram"></label>
+							</div>
+							<div class="checkbox-communicat">
+								<input id="o_2" data-error="Ошибка" class="checkbox-communicat__input" type="radio" value="1" name="form[]">
+								<label for="o_2" class="checkbox-communicat__label _icon-whatsapp"></label>
+							</div>
+							<div class="checkbox-communicat">
+								<input id="o_3" data-error="Ошибка" class="checkbox-communicat__input" type="radio" value="1" name="form[]">
+								<label for="o_3" class="checkbox-communicat__label"><span class="checkbox-communicat__text">Позвонить</span></label>
+							</div>
+						</div>
+						<button type="submit" class="form-contact__button button">Оформить заказ</button>
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- =================================== -->
+
+<div id="thank1" aria-hidden="true" class="popup thank-popup">
+	<div class="popup__wrapper">
+		<div class="popup__content thank-popup__content">
+			<button data-close type="button" class="popup__close _icon-close"></button>
+
+			<div class="thank-popup__title">Спасибо за заказ!</div>
+			<div class="thank-popup__text">Наш менеджер свяжется с Вами в ближайшее время!</div>
+
+			<div class="popup__cart cart-popup">
+				<div class="cart-popup__items">
+					<div class="cart-popup__item">
+						<div class="cart-popup__top">
+							<div class="cart-popup__image-ibg--contain"><img src="@img/cart/small01.jpg" alt=""></div>
+							<div class="cart-popup__title">Обручальное кольцо с бриллиантом</div>
+						</div>
+					</div>
+				</div>
+				<button data-close type="button" class="thank-popup__button button">Вернуться к покупкам</button>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- =================================== -->
+
+<div id="thank2" aria-hidden="true" class="popup thank-popup">
+	<div class="popup__wrapper">
+		<div class="popup__content thank-popup__content">
+			<button data-close type="button" class="popup__close _icon-close"></button>
+
+			<div class="thank-popup__title">Спасибо за заказ!</div>
+			<div class="thank-popup__text">Наш менеджер свяжется с Вами в ближайшее время!</div>
+
+			<button data-close type="button" class="thank-popup__button button">Вернуться к покупкам</button>
+
+		</div>
+
+	</div>
+</div>
 </div>
