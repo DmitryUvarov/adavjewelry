@@ -73,7 +73,8 @@
 .slide-product {
   position: relative;
   padding-bottom: percent(500, 653);
-  background: rgba(0, 0, 0, 0.03);
+  // background: rgba(0, 0, 0, 0.03);
+  background-color: #fff;
 
   img {
     position: absolute;

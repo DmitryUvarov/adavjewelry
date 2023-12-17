@@ -230,11 +230,11 @@ function initSliders() {
 				lazyPreloaderClass: 'preloader',
 
 				effect: 'fade',
-				autoplay: {
-					delay: 4000,
-					disableOnInteraction: false,
-					pauseOnMouseEnter: true,
-				},
+				// autoplay: {
+				// 	delay: 4000,
+				// 	disableOnInteraction: false,
+				// 	pauseOnMouseEnter: true,
+				// },
 
 				navigation: {
 					prevEl: '.product__slider .button-prev',
