@@ -67,11 +67,26 @@
     }
 
     a {
-      transition: all 0.3s ease 0s;
+      color: #e8c886;
+      position: relative;
       @media (any-hover: hover) {
         &:hover {
-          color: #e8c886;
+          &::before {
+            opacity: 1;
+          }
         }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: toRem(1);
+        bottom: 0;
+        left: 0;
+        background-color: #e8c886;
+        opacity: 0;
+        transition: opacity 0.3s ease 0s;
       }
     }
   }
