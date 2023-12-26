@@ -33,6 +33,8 @@
 
     @media (max-width: $mobile) {
       min-width: 100vw;
+
+      min-height: calc(100svh - var(--header-height));
     }
   }
 
