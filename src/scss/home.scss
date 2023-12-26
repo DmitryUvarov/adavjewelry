@@ -30,6 +30,10 @@
     @include adaptiveValue("padding-bottom", 96, 120);
     @include adaptiveValue("padding-right", 37, 10, 0, 1420, 991);
     @include adaptiveValue("padding-left", 37, 10, 0, 1420, 991);
+
+    @media (max-width: $mobile) {
+      min-width: 100vw;
+    }
   }
 
   &__image-ibg {
