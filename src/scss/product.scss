@@ -188,9 +188,9 @@
       @include adaptiveValue("margin-bottom", 40, 25);
     }
 
-    @media (max-width: $mobile) {
-      display: none;
-    }
+    // @media (max-width: $mobile) {
+    //   display: none;
+    // }
   }
 
   &__subtitle {
@@ -224,7 +224,7 @@
 
     @media (max-width: $mobile) {
       flex-direction: column;
-      display: none;
+      // display: none;
     }
   }
 
