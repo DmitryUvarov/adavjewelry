@@ -1,0 +1,19 @@
+.favorite {
+  @include adaptiveValue("padding-top", 80, 30);
+  @include adaptiveValue("padding-bottom", 200, 35);
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: toRem(20);
+  }
+
+  &__items {
+    display: grid;
+    @include adaptiveValue("gap", 20, 15);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(320), 1fr));
+  }
+
+  &__item {
+  }
+}
