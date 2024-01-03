@@ -9,14 +9,18 @@
   &__container {
     display: grid;
     gap: toRem(30);
+
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
   }
 
   &__slider {
     position: relative;
 
-    @media (max-width: $mobile) {
-      margin: 0 toRem(-15);
-    }
+    // @media (max-width: $mobile) {
+    //   margin: 0 toRem(-15);
+    // }
   }
 
   &__wrapper {
@@ -107,6 +111,9 @@
       padding-bottom: toRem(15);
       grid-template-columns: 1fr;
       grid-auto-rows: 1fr;
+
+      padding-right: toRem(15);
+      padding-left: toRem(15);
     }
   }
 
